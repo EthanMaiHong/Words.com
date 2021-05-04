@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Lolchiii/Words/issues"
   },
-  "homepage": "https://github.com/Lolchiii/Words#readme"
+  "homepage": "https://github.com/Lolchiii/Words#readme",
+  "dependencies": {
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.7"
+  }
 }
