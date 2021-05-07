@@ -8,7 +8,8 @@ const { MONGODB } = require('./config.js');
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ({ req }) => ({ req }) // take that request body and forward it to the context
 });
 
 mongoose

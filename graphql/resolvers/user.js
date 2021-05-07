@@ -62,11 +62,21 @@ module.exports = {
             }
 
             // TODO: Make sure user doesn't already exist
-            const user = User.findOne({ username });
+            const user = await User.findOne({ username });
             if (user) {
                 throw new UserInputError('Username is taken', {
                     errors: {
                         username: 'This username is taken'
+                    }
+                });
+            }
+
+            // Make sure email isn't already used
+            const userEmail = await User.findOne({ email });
+            if (userEmail) {
+                throw new UserInputError('Email is taken', {
+                    errors: {
+                        email: 'This email is taken'
                     }
                 });
             }
@@ -89,7 +99,7 @@ module.exports = {
                 ...res._doc,
                 id: res._id,
                 token
-            }
+            };
         }
     }
 }
