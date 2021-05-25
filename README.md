@@ -3,4 +3,6 @@ A text-sharing platform's backend that allows users to share discussions, quotes
 
 Backend built with GraphQL, Node, MongoDB, and Express
 
-Frontend in development with Bootstrap
+Frontend in development using Bootstrap
+
+![](homepage.png)
